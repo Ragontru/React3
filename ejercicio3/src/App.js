@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import './App.css';
-import EjercicioComponent from './components/EjercicioComponent'
+import Elemento1Component from './components/Elemento1Component';
+import EjercicioComponent from './components/Elemento1Component'
 import EnunciadoComponent from './components/EnunciadoComponent'
 
 class App extends Component {
@@ -24,7 +25,7 @@ class App extends Component {
         <EnunciadoComponent></EnunciadoComponent>
         <label>Elemento 1 : </label>
         <input value={this.state.elem1} onChange={this.changeElement}></input>
-        <EjercicioComponent elem1={this.state.name}></EjercicioComponent>
+        <Elemento1Component elem1={this.state.name}></Elemento1Component>
       </div>
     );
   }
