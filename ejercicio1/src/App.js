@@ -1,28 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import EjercicioComponent from './components/EjercicioComponent';
 import EnunciadoComponent from './components/EnunciadoComponent';
-import { Component } from 'react';
 
-class App extends Component {
 
-  constructor() {
-    super(
-      this.state = {
-        num1: 1,
-        num2: 2
-      }
-    )
-  }
-
-  render() {
+function App() {
     return (
       <div className="App">
         <EnunciadoComponent></EnunciadoComponent>
-
+        <EjercicioComponent></EjercicioComponent>
       </div>
     );
   }
-
-}
 
 export default App;
