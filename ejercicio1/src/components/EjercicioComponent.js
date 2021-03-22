@@ -10,7 +10,8 @@ class EjercicioComponent extends Component {
         return (
             <div>
                 <form onSubmit={this.sumar}>
-                    <p>Número 1 :
+                    <p>
+                        <label>Número 1 : </label>
                         <input name="num1" type="number" />
                     </p>
                     <p>
