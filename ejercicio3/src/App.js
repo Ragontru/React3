@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import './App.css';
 import Elemento1Component from './components/Elemento1Component';
-import EjercicioComponent from './components/Elemento1Component'
-import EnunciadoComponent from './components/EnunciadoComponent'
+import EnunciadoComponent from './components/EnunciadoComponent';
 
 class App extends Component {
+
   constructor() {
     super()
     this.state = {
@@ -21,11 +21,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" >
         <EnunciadoComponent></EnunciadoComponent>
-        <label>Elemento 1 : </label>
         <input value={this.state.elem1} onChange={this.changeElement}></input>
-        <Elemento1Component elem1={this.state.name}></Elemento1Component>
+        <Elemento1Component elem1={this.state.elem1} cambiarElemento={this.changeElement}></Elemento1Component>
       </div>
     );
   }

@@ -5,7 +5,6 @@ export default class Elemento1Component extends Component {
         return (
             <div>
                 <p>
-                    <label>Elemento 1 : </label>
                     <input value={this.props.elem1} type="text" />
                 </p>
             </div>
