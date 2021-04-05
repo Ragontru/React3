@@ -12,13 +12,12 @@ class App extends Component {
     }
   }
 
-  changeElement = (event => {
+  changeElement = (event) => {
     this.setState({
       elem1: event.target.value
     })
   }
-  )
-
+  
   render() {
     return (
       <div className="App" >
