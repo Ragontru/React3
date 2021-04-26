@@ -11,33 +11,38 @@ class EjercicioComponent extends Component {
         return (
             <div>
                 <form onSubmit={this.totalArt}>
-                    <label>
-                        Producto:
-                <select>
+                    <p>
+                        <label>Producto: </label>
+                        <select>
                             <option value="pan">Pan</option>
                             <option value="leche">Leche</option>
                             <option value="nueces">Nueces</option>
                             <option value="manzana">Manzana</option>
                         </select>
-                        <br />
-                Precio:
-                    <input name="precio" type="number" />
-                        <br />
-                Cantidad:
-                    <input name="cantidad" type="number" />
-                        <br />
-                    </label>
+
+                    </p>
+                    <p>
+                        <label>Precio: </label>
+                        <input name="precio" type="number" />
+                    </p>
+                    <p>
+                        <label>Cantidad: </label>
+                        <input name="cant" type="number" />
+                    </p>
+                    <p>
+                        <input type="submit" value="Total"/>
+                    </p>
                 </form>
-            </div>
+            </div >
         );
     }
 
-    totalArt(event){
+    totalArt(event) {
         event.preventDefault();
-        const cant = parseInt(event.targer.cantidad.value);
-        const prec = parseInt(event.targer.precio.value);
-        const totalArtInd = cant * prec;
-        alert('El precio de '+cant+' es de '+totalArtInd);
+        const v1 = parseInt(event.target.precio.value);
+        const v2 = parseInt(event.target.cant.value);
+        const suma = v1 * v2;
+        alert('El total del ' + suma);
     }
 
 }
