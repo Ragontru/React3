@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import EnunciadoComponent from '../../ejercicio5/src/components/EnunciadoComponent';
+import EjercicioComponent from '../../ejercicio5/src/components/EjercicioComponent';
+import { Component } from 'react';
 
-function App() {
+class App extends Component {
+
+  constructor(){
+    super()
+    this.state =  {
+      num: '0'
+    }
+  }
+  
+  changeElement = (eve)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <EnunciadoComponent></EnunciadoComponent>
+      <EjercicioComponent></EjercicioComponent>
     </div>
   );
 }
