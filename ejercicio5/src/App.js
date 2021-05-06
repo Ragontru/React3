@@ -5,21 +5,18 @@ import { Component } from 'react';
 
 class App extends Component {
 
-  constructor(){
+  constructor() {
     super()
-    this.state =  {
-      num: '0'
-    }
   }
-  
-  changeElement = (eve)
 
-  return (
-    <div className="App">
-      <EnunciadoComponent></EnunciadoComponent>
-      <EjercicioComponent></EjercicioComponent>
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        <EnunciadoComponent></EnunciadoComponent>
+        <EjercicioComponent></EjercicioComponent>
+      </div>
+    );
+  }
 }
 
 export default App;

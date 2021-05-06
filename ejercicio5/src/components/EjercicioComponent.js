@@ -16,17 +16,15 @@ class EjercicioComponent extends Component {
                 </button>
                 </div>
                 <div class="row">
-                    <input value={this.props.lanzarDado} onChange={this.props.cambiarNumero}/>
+                    <input value="Tira el dado" onClick={this.props.cambiarNumero}/>
                 </div >
             </div >
         );
     }
 
     lanzarDado(event) {
-        var numero = Math.floor(Math.random() * 6) + 1;
-        this.setState({
-            
-        })
+        var numero = Math.round(Math.random() * 5)
+        
 
     }
 
