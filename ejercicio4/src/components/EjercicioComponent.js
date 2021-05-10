@@ -33,6 +33,8 @@ class EjercicioComponent extends Component {
                         <input type="submit" value="Total"/>
                     </p>
                 </form>
+
+                <ul id="listaCompra"></ul>
             </div >
         );
     }
