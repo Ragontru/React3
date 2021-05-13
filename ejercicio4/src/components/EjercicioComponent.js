@@ -16,23 +16,23 @@ class EjercicioComponent extends Component {
                         <p>
                             <label>Producto: </label>
                             <select>
-                                <option value="pan">Pan</option>
-                                <option value="leche">Leche</option>
-                                <option value="nueces">Nueces</option>
-                                <option value="manzana">Manzana</option>
+                                <option id="pan" value="pan">Pan</option>
+                                <option id="leche" value="leche">Leche</option>
+                                <option id="nueces" value="nueces">Nueces</option>
+                                <option id="manzana" value="manzana">Manzana</option>
                             </select>
 
                         </p>
                         <p>
                             <label>Precio: </label>
-                            <input name="precio" type="number" />
+                            <input id="precio" type="number" />
                         </p>
                         <p>
                             <label>Cantidad: </label>
-                            <input name="cant" type="number" />
+                            <input id="cant" type="number" />
                         </p>
                         <p>
-                            <button class="item-button alCarrito">Añadir a la lista</button>
+                            <button class="item-button" onClick="alCarrito">Añadir a la lista</button>
                         </p>
                     </form>
                 </div>
@@ -66,8 +66,8 @@ class EjercicioComponent extends Component {
 
     alCarrito(event) {
         event.preventDefault();
-        const v1 = parseInt(event.target.precio.value);
-        const v2 = parseInt(event.target.cant.value);
+        const v1 = event.target.precio.value;
+        const v2 = event.target.cant.value;
         const suma = v1 * v2;
         alert('El total del ' + suma + ' euros.');
     }
