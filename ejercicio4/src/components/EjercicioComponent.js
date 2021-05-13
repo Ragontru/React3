@@ -4,6 +4,7 @@ class EjercicioComponent extends Component {
 
     constructor(props) {
         super(props);
+        carrito = this.state;
         this.alCarrito = this.alCarrito.bind(this);
     }
 
@@ -66,10 +67,15 @@ class EjercicioComponent extends Component {
 
     alCarrito(event) {
         event.preventDefault();
+
+        this.setState((state) => {
+            return {carrito: this.state.carrito + nuevaLinea}
+        });
+
         const v1 = event.target.precio.value;
         const v2 = event.target.cant.value;
-        const suma = v1 * v2;
-        alert('El total del ' + suma + ' euros.');
+        const suma = suma + v1 * v2;
+        alert('El carrito  del ' + suma + ' euros.');
     }
 
 }
